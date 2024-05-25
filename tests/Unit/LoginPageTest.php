@@ -11,10 +11,10 @@ class LoginPageTest extends TestCase
      */
     public function test_login_page_displays_expected_fields(): void
     {
-        $response = $this->get('/');
+        $responseMock = $this->get('/');
 
-        $response->assertSee('email');
-        $response->assertSee('password');
-        $response->assertSee('Login');
+        $responseMock->assertSee('email');
+        $responseMock->assertSee('password');
+        $responseMock->assertSee('Login');
     }
 }
